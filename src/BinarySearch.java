@@ -34,4 +34,9 @@ public final class BinarySearch <T extends Comparable<T>> {
         }
         return -1;
     }
+
+    public int search(T[] objectsArr,T elementToSearch) {
+        this.setObjects(objectsArr);
+        return this.search(elementToSearch);
+    }
 }
