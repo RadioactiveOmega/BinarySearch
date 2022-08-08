@@ -1,19 +1,8 @@
-import java.util.Arrays;
+public class BinarySearch{
 
-public class BinarySearch <T extends Comparable<T>> {
+    public static <T extends Comparable<T>> int search(T[] objects, T elementToSearch){
 
-    private final T[] objects;
-
-    public BinarySearch(T[] objects) {
-        if (objects == null) throw new NullPointerException("Array may not be null");
-        this.objects = Arrays.copyOf(objects, objects.length);
-    }
-
-    public T[] getObjects() {
-        return Arrays.copyOf(objects, objects.length);
-    }
-
-    public int search(T elementToSearch) {
+        if (objects == null || elementToSearch == null) throw new NullPointerException("Array may not be null");
 
         int top = objects.length - 1;
         int low = 0;
@@ -30,5 +19,4 @@ public class BinarySearch <T extends Comparable<T>> {
         }
         return -1;
     }
-
 }
