@@ -2,7 +2,7 @@ public class BinarySearch{
 
     public static <T extends Comparable<T>> int search(T[] objects, T elementToSearch){
 
-        if (objects == null || elementToSearch == null) throw new NullPointerException("Array may not be null");
+        if (objects == null || elementToSearch == null) throw new NullPointerException("Array or element to search may not be null");
 
         int top = objects.length - 1;
         int low = 0;
